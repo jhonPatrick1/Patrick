@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Préstamos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Calculadora de Préstamos</h1>
+
+    <div class="calculators-wrapper">
+
+        <div class="calculator-wrapper">
+            <div class="calculator-box">
+                <h2>Préstamos Mensuales</h2>
+
+                <label for="monto-mes">Monto a prestar (S/.):</label>
+                <input type="number" id="monto-mes" placeholder="Ej: 1000">
+
+                <label for="interes-mes">Interés Mensual Simple (%):</label>
+                <input type="number" id="interes-mes" placeholder="Ej: 5">
+                
+                <label for="plazo-mes">Plazo (en meses):</label>
+                <input type="number" id="plazo-mes" placeholder="Ej: 12">
+
+                <button id="btnCalcular-mes">Calcular (Mes)</button>
+            </div>
+
+            <div id="resultado-mes" class="resultado-box">
+                </div>
+        </div>
+
+        <div class="calculator-wrapper">
+            <div class="calculator-box">
+                <h2>Préstamos por Días</h2>
+
+                <label for="fechaInicio-dia">Desde (Fecha de entrega):</label>
+                <input type="date" id="fechaInicio-dia">
+
+                <label for="fechaFin-dia">Hasta (Fecha de pago):</label>
+                <input type="date" id="fechaFin-dia">
+
+                <label for="monto-dia">Monto a prestar (S/.):</label>
+                <input type="number" id="monto-dia" placeholder="Ej: 500">
+
+                <label for="porcentaje-dia">Interés Mensual (%):</label>
+                <input type="number" id="porcentaje-dia" placeholder="Ej: 20">
+                
+                <button id="btnCalcular-dia">Calcular (Días)</button>
+            </div>
+
+            <div id="resultado-dia" class="resultado-box">
+                </div>
+        </div>
+
+    </div> <script src="script.js"></script>
+</body>
+</html>

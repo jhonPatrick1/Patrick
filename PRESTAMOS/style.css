@@ -1,0 +1,228 @@
+/* Estilos Generales y Reseteo Básico */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* * NUEVO: Contenedor para ambas calculadoras
+ * Usa Flexbox para ponerlas lado a lado
+*/
+.calculators-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben, se ponen una debajo de otra */
+    justify-content: center;
+    gap: 40px; /* Espacio entre las calculadoras */
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo para que quepan las dos */
+}
+
+/* Wrapper para una sola calculadora (formulario + resultado) */
+.calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px; /* Ancho de cada calculadora */
+}
+
+/* * RENOMBRADO: De .calculator-container a .calculator-box
+ * Estilo de la caja blanca del formulario
+*/
+.calculator-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box; /* Importante */
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-align: center;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* Estilo unificado para todos los inputs */
+input[type="number"],
+input[type="date"] {
+    width: 100%; /* Ocupa todo el ancho de la caja */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box; /* Importante para que el padding no desborde */
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* * RENOMBRADO: De #resultado-container a .resultado-box
+ * Estilo de la caja de resultados (reutilizable)
+*/
+.resultado-box {
+    background-color: #e9f5ff; /* Fondo azul claro */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #b3d9ff;
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 1.1em;
+    display: none; /* Oculto por defecto */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.resultado-box p {
+    margin: 10px 0;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultado-box p span {
+    font-weight: 500;
+    color: #555;
+}
+
+.resultado-box p strong {
+    color: #007bff;
+    font-weight: 700;
+}
+/* --- Estilos para la Tabla Resumen HORIZONTAL (Mensual) --- */
+.resumen-tabla-horizontal {
+    display: flex;
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden; /* Para que el borde redondeado aplique a los hijos */
+}
+
+.resumen-columna {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+.resumen-columna:last-child {
+    border-right: none;
+}
+
+.resumen-columna span {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.resumen-columna strong {
+    font-weight: 700;
+    font-size: 1.15em;
+    color: #0056b3;
+}
+
+/* Estilo para el total */
+.resumen-columna.total {
+    background-color: #d4edda; /* Verde claro */
+}
+.resumen-columna.total span {
+    color: #155724;
+}
+.resumen-columna.total strong {
+    color: #155724;
+    font-size: 1.25em;
+}
+
+/* --- Estilos para la lista de cuotas (ya los tenías) --- */
+.resultado-box .cuota-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #b3d9ff; /* Línea divisoria */
+    padding-bottom: 10px;
+}
+.resultado-box .cuota-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.resultado-box .cuota-numero {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    margin: 0;
+}
+.resultado-box .cuota-desglose {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0 0 0;
+    display: block;
+    text-align: left;
+}
+
+/* --- Media query para la tabla resumen en móviles --- */
+@media (max-width: 600px) {
+    .resumen-tabla-horizontal {
+        flex-direction: column; /* Apila las columnas */
+    }
+    .resumen-columna {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+    .resumen-columna:last-child {
+        border-bottom: none;
+    }
+}
