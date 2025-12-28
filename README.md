@@ -34,5 +34,8 @@ $$I_{diario} = \frac{Monto \times (\%/100)}{30}$$
 * **JavaScript (ES6):** Lógica de cálculo y manejo de eventos.
 
 ## 📸 Despliegue
+
+> <img width="772" height="753" alt="image" src="https://github.com/user-attachments/assets/c798b564-06a1-4ecd-8794-7f5b6c84c98d" />
+
 > 🔗 Link del proyecto: https://jhonpatrick1.github.io/Calculadora-de-Prestamos/PRESTAMOS/
 
