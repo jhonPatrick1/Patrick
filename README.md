@@ -15,6 +15,3 @@ Este proyecto es una aplicación web interactiva diseñada para ayudar a los usu
 ## 📸 Demo
 > 🔗 Link del proyecto: https://jhonpatrick1.github.io/Calculadora-de-Prestamos/PRESTAMOS/
 
-## 💻 Cómo ejecutarlo
-1. Clona el repositorio: `git clone https://github.com/jhonPatrick1/Calculadora-de-Prestamos.git`
-2. Abre el archivo `index.html` en tu navegador.
