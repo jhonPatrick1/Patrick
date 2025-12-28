@@ -12,6 +12,6 @@ Este proyecto es una aplicación web interactiva diseñada para ayudar a los usu
 * **CSS3:** Diseño responsivo y estilos visuales.
 * **JavaScript (ES6):** Lógica de cálculo y manejo de eventos.
 
-## 📸 Demo
+## 📸 Despliegue
 > 🔗 Link del proyecto: https://jhonpatrick1.github.io/Calculadora-de-Prestamos/PRESTAMOS/
 
